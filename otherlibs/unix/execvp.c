@@ -14,7 +14,11 @@
 /**************************************************************************/
 
 #define _GNU_SOURCE  /* helps to find execvpe() */
+#ifdef __sun
+#include <strings.h>
+#else
 #include <string.h>
+#endif
 #include <caml/mlvalues.h>
 #include <caml/memory.h>
 #define CAML_INTERNALS

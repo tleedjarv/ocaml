@@ -13,6 +13,10 @@
 /*                                                                        */
 /**************************************************************************/
 
+#if defined(__sun) && !defined(_POSIX_PTHREAD_SEMANTICS)
+#define _POSIX_PTHREAD_SEMANTICS
+#endif
+
 #define CAML_INTERNALS
 
 #include "caml/alloc.h"
