@@ -71,6 +71,10 @@ Working version
   (Gabriel Scherer, review by Sébastien Hinderer and David Allsopp,
    report by Ralph Seichter)
 
+- #10063: (Re-)enable building on illumos (SmartOS, OmniOS, ...) and other
+  OpenSolaris-based platforms (x86_64 and GCC only) (partially revert #2024).
+  (Tõivo Leedjärv, review by ??)
+
 ### Bug fixes:
 
 - #10005: Try expanding aliases in Ctype.nondep_type_rec
