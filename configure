@@ -12454,6 +12454,9 @@ case $ocaml_cv_cc_vendor in #(
   xlc-*) :
     CPP="$CC -E -qnoppline" ;; #(
   # suppress incompatible XLC line directives
+  sunc-*) :
+    CPP="$CC -E -Qn" ;; #(
+  # suppress generation of Sun PRO ident string
   msvc-*) :
     CPP="$CC -nologo -EP" ;; #(
   *) :
@@ -13605,14 +13608,6 @@ fi
     case $ocaml_cv_cc_vendor in #(
   xlc*) :
     mksharedlib="$CC -qmkshrobj -G \$(LDFLAGS)"
-                shared_libraries_supported=true ;; #(
-  *) :
-     ;;
-esac ;; #(
-  sparc-sun-solaris*) :
-    case $ocaml_cv_cc_vendor in #(
-  sunc*) :
-    mksharedlib="$CC -G"
                 shared_libraries_supported=true ;; #(
   *) :
      ;;
