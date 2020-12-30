@@ -29,6 +29,9 @@
 #define CAML_INTERNALS
 #include "caml/config.h"
 #include "caml/mlvalues.h"
+#ifdef _WIN32
+#include "caml/osdeps.h"
+#endif /* _WIN32 */
 
 #define caml_stat_strdup strdup
 
